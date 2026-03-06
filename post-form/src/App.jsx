@@ -24,7 +24,14 @@ function App() {
   const preventDefaultSubmit = (e) => {
     e.preventDefault()
     console.log(formData)
+    setFormData({
+      author: "",
+      title: "",
+      body: "",
+      public: false
+    })
   }
+
   return (
     <form onSubmit={preventDefaultSubmit}>
       <input
